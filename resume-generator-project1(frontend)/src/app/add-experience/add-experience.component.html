@@ -1,0 +1,59 @@
+<div class="container">
+<header><u>EXPERIENCE</u> <span><i class="bi bi-list-stars"></i></span></header>
+<form [formGroup]="experiencesaveform">
+     <div class="fields">
+    <table>
+    <div class="form-group">
+        <tr>
+            <td>
+        <label for="experinece_company">Company</label>  
+            </td>
+            <td>
+                <input type="text"  class="form-control" formControlName="experience_company" maxlength="200" size="80">
+          </td>
+          </tr>
+    </div>
+    <div class="form-group">
+        <tr>
+            <td>
+        
+                <label for="experience_designation">Designation</label>  
+           </td>
+           <td>
+                <input type="text" class="form-control" formControlName="experience_designation" maxlength="200" size="80">
+           </td>
+           </tr>
+            </div>
+        <div class="form-group">
+            <tr>
+                <td>
+                <label for="experience_startdate">StartDate</label>  
+          </td>
+          <td>
+                <input type="date" class="form-control" formControlName="experience_startdate">
+            </td>
+            </tr>
+    </div>
+    <div class="form-group">
+        <tr>
+            <td>
+       
+                <label for="experience_enddate">EndDate</label>  
+            </td>
+            <td>
+                <input type="date" class="form-control" formControlName="experience_enddate">
+           </td>
+           </tr>
+        
+        </div>
+       
+            <!-- <button type="submit" (click)="saveExperience()" class="btn btn-success">Submit</button>   -->
+       
+            
+        
+    </table>
+</div>
+</form>
+
+</div>
+<div><br><br></div>

@@ -1,0 +1,67 @@
+
+<div class="container">
+<header><u>PROFILE</u><span><i class="bi bi-person-lines-fill"></i></span></header>
+<form [formGroup]="profilesaveform" >
+      <div class="fields">
+ <table>
+<div class="form-group">
+<tr>
+ <td>
+ <label for="firstname">FirstName</label>
+</td>
+<td>
+<input type="text" class="form-control" formControlName="first_name" maxlength="200" size="80">
+</td></tr>
+</div><br>
+ <div class="form-group">
+<tr>
+ <td>
+ <label for="lastname">LastName</label> 
+</td>
+<td>
+ <input type="text" class="form-control" formControlName="last_name" maxlength="200" size="80">
+</td>
+</tr>
+      </div><br>
+<div class="form-group">
+ <tr>
+ <td>
+<label for="email">Email</label> 
+</td>
+<td>
+<input type="email" class="form-control" formControlName="email" maxlength="200" size="80">
+</td> 
+ </tr>
+ </div><br>
+<div class="form-group">
+ <tr>
+ <td>
+<label for="phone">Phone</label> 
+</td> 
+<td>
+ <input type="tel"class="form-control" formControlName="phone" maxlength="200" size="80">
+
+ </td>
+</tr>
+ </div>
+<br>
+<div class="form-group">
+<tr><td>
+ <label for="designation">Designation</label>
+ </td>
+ <td>
+<input type="text" class="form-control" formControlName="designation" maxlength="200" size="80">
+
+</td>
+</tr>
+</div>
+
+<!-- <button type="submit" (click)="saveProfile()" class="btn btn-success">Submit</button>   -->
+
+
+</table>
+</div>
+</form>
+
+</div>
+<div><br><br></div>

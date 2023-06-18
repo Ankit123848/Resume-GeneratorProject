@@ -1,0 +1,142 @@
+<header>
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">RESUME GENERATOR</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">RESUME GENERATOR</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" [routerLink]="['/homepage']">LOGOUT</a>
+              </li>
+              <!--<li class="nav-item">
+                  <a class="nav-link" [routerLink] = "['/login']">LOGIN</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" [routerLink] = "['/signup']">SIGNUP</a><br>
+              </li>-->
+              </ul>
+          </div>
+          </div>
+      </div>
+      <br>
+  </nav>
+  </header>
+  <br>
+  <aside class="image">
+    <div>
+    <figure>
+        <img src="../assets/images/signup-image.jpg" style="height: 60%;">
+    </figure> 
+    </div>
+</aside>
+<br>
+
+<div>
+  <section class="signup" style="padding-top: 10px;">
+      <div class="container">
+          <h2>Sign Up</h2>
+      </div>
+  </section>
+ </div>
+ <br>
+
+<section class="signupform" style="width: 50%;  padding-left: 10px;">
+  <div>
+    <form [formGroup] = "form" #signupform = "ngForm" (ngSubmit)="signupUser()">
+      <div class="form-group">
+          <label for="firstName">First Name:</label>
+          <input type="text" class="form-control" placeholder="First Name" formControlName="firstName"  #firstName required>
+          <small class="text-danger" [class.d-none]="firstName.oninvalid && firstName.blur">First name is required field</small>
+      </div>
+              
+      <div class="form-group">
+          <label for="lastName">Last Name:</label>
+          <input type="text" class="form-control" placeholder="Last Name" formControlName="lastName"  #lastName required>
+          <small class="text-danger" [class.d-none]="lastName.oninvalid && lastName.blur">Last name is required field</small>
+      </div>
+  
+      <div class="form-group">
+            <label for="email"> Email </label>
+            <input type="email" class="form-control" placeholder="Enter email" formControlName="email" 
+            required pattern="^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$" #email [class.is-invalid]="email.oninvalid && email.blur">
+            <small class="text-danger" [class.d-none] = "email.oninvalid || email.ontouchend">Email is required field</small>
+      </div>
+  
+      <div class="form-group">
+          <label for="password"> Password </label>
+          <input type="password" class="form-control" placeholder="Enter password" formControlName="password" required 
+          pattern="" #password [class.is-invalid] = "password.oninvalid && password.ontouchend">
+          <small class="text-danger" [class.d-none] = "password.oninvalid || password.ontouchend">Password is required field</small>
+      </div>
+  
+      <div class="form-group">
+          <label for="password">Confirm Password:</label>
+          <input type="password" class="form-control" placeholder="Enter confirm password" formControlName="cpassword" required 
+          pattern="" #cpassword [class.is-invalid] = "password.oninvalid && password.ontouchend">
+          <small class="text-danger"[class.d-none] = "(cpassword.value == password.value) || password.ontouchend">Does not match password</small>
+      </div>
+    </form>
+  </div>
+</section>
+  
+
+  <br>
+  <article class="submit" style="width: 50%; padding-left: 10px;">
+      <form>
+          <div class="checkbox">
+              <label><input type="checkbox" name="remember"> Remember me</label>
+            </div>
+            <br>
+            <div>
+            <button [disabled]="signupform.form.invalid" type="submit" (click) = "save()" class="btn btn-info" [routerLink] = "['/login']"> Sign Up </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <small class="float-right btextual" [routerLink] = "['/login']"> Existing User? <a [routerLink] = "['/signup']">Login</a></small>
+          </div>
+      </form>
+  </article>
+  <br>
+  <footer class="bg-dark text-center text-white">
+         <!-- Grid container -->
+         <div class="container p-4">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+            <i class="bi bi-facebook"></i>
+          </a>
+      
+            <!-- Twitter -->
+            <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+              <i class="bi bi-twitter"></i>
+            </a>
+      
+            <!-- Google -->
+            <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+              <i class="bi bi-google"></i>
+            </a>
+      
+            <!-- Instagram -->
+            <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+              <i class="bi bi-instagram"></i>
+            </a>
+      
+            <!-- Linkedin -->
+            <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+              <i class="bi bi-linkedin"></i>
+            </a>
+      
+            <!-- Github -->
+            <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+              <i class="bi bi-github"></i>
+            </a>
+          </section>
+        
+      </div>
+  </footer>

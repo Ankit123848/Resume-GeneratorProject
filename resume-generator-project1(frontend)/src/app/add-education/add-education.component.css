@@ -1,0 +1,113 @@
+table,th,td{
+    /* border: 1px solid black; */
+    margin-left: auto;
+    margin-right: auto;
+}
+label{        
+    width: 100px;
+    display: inline-block;
+    margin:12px;
+    padding: auto;
+    text-align: left;
+    text-decoration: double;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container{
+    border-radius: 20px;
+    position: relative;
+    background-color: #fff;
+    color: black;
+    height: 430px;
+    width: 100%;
+    padding: 6px;
+    margin: auto;
+    text-indent: 50px;
+    box-shadow: 0 5px rgba(0,0,0, 0.2);
+}
+u{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: bold;
+    font-size: larger;
+    font-weight: 500;
+    padding-top:30px;
+    padding-bottom: 30px;
+}
+.container header{
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    position:relative;
+    
+}
+.container header::before{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    height: 7px;
+    width: 56px;
+    background-color: #4070f4;
+    border-radius: 10px;
+}
+.container form{
+    position: relative;
+    background-color: #fff;
+    height: 365px;
+    min-width: 500px;
+
+}
+
+.form-control{
+    text-align: left;
+}
+input{
+    text-align: left;
+}
+.container form .fields{
+    display:flex;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+
+}
+form .fields .form-group{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+  }
+  form .form-group label{
+    /*display: block;
+    font-weight: 500;
+    margin-bottom: 5px;*/
+    width: 100px;
+    display: inline-block;
+    margin:12px;
+    padding: auto;
+    text-align: left;
+    text-decoration: double;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+  
+  .fields .form-group input{
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+  .fields .form-group input:focus,
+  .fields .form-group input:valid{
+    border-color: lightgray;
+  }
+  u{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: bold;
+    font-size: larger;
+    font-weight: 500;
+    padding-top:30px;
+    padding-bottom: 30px;
+}
